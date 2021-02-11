@@ -1,0 +1,138 @@
+.section-about {
+  background-image: url("../images/about-background.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  @media (max-width: 767px) {
+    background: none;
+  }
+
+  .section-title:after {
+    content: 'О СПЕЦИАЛИСТЕ';
+    position: absolute;
+    z-index: -1;
+    left: -402px;
+    top: -122px;
+    white-space: nowrap;
+    font-family: Lato, sans-serif;
+    font-size: 288px;
+    font-weight: 400;
+    line-height: 346px;
+    color: $title-shadow;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.about-layout {
+  @include flex-center-xy;
+  margin: 0 0 98px;
+  width: 100%;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media (max-width: 767px) {
+    margin: 0;
+  }
+}
+
+.about-layout-photo {
+  position: relative;
+  width: 432px;
+  max-height: 496px;
+  margin: 0 50px 0 0;
+  @media (max-width: 1023px) {
+    margin: 0 30px 0 0;
+  }
+  @media (max-width: 767px) {
+    width: 50%;
+    max-width: 267px;
+    margin: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: -4%;
+    top: -5%;
+    width: 100%;
+    height: 100%;
+    border: 5px solid $blue;
+    box-sizing: border-box;
+    @media (max-width: 767px) {
+      border: 3px solid $blue;
+    }
+  }
+}
+
+.about-layout-info {
+  @include flex-center-x;
+  flex-direction: column;
+  width: 713px;
+  max-width: 60%;
+  @media (max-width: 767px) {
+    max-width: 95%;
+    align-items: center;
+  }
+}
+
+.about-layout-info-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  color: #000000;
+  margin: 0 0 38px;
+  @media (max-width: 1023px) {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 30px;
+  }
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 9px 0;
+  }
+}
+
+.about-layout-info-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $about-font;
+  margin: 0 0 12px;
+  @media (max-width: 1023px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 25px;
+  }
+
+  &:last-of-type {
+    margin: 0 0 56px;
+    @media (max-width: 1023px) {
+      margin: 0 0 30px;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.about-layout-info-button {
+  width: 290px;
+  height: 72px;
+  font-size: 36px;
+  line-height: 43px;
+  @media (max-width: 1023px) {
+    width: 210px;
+    height: 52px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

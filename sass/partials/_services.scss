@@ -1,0 +1,134 @@
+.section-services {
+  .section-title:after {
+    content: 'УСЛУГИ';
+    position: absolute;
+    z-index: -1;
+    left: -576px;
+    top: -84px;
+    font-family: Lato, sans-serif;
+    font-size: 288px;
+    font-weight: 400;
+    line-height: 346px;
+    color: $title-shadow;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.services-layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  @media (max-width: 1279px) {
+    justify-content: space-evenly;
+    column-gap: 10px;
+  }
+}
+
+.services-layout-item {
+  @include flex-center-xy;
+  position: relative;
+  flex-direction: column;
+  width: 396px;
+  height: 396px;
+  margin: 0 0 20px;
+  @media (max-width: 1023px) {
+    width: 335px;
+    height: 335px;
+  }
+  @media (max-width: 767px) {
+    height: 160px;
+    margin: 0 0 10px;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin: 0;
+    @media (max-width: 767px) {
+      margin: 0 0 10px;
+    }
+  }
+
+  &:last-child {
+    margin: 0;
+    background: none;
+  }
+}
+
+.services-layout-item-icon {
+  @include flex-center-xy;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 22px;
+  @media (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+    margin: 0 0 8px;
+  }
+}
+
+.services-layout-item-title {
+  width: 340px;
+  max-width: 90%;
+  text-align: center;
+  color: #ffffff;
+  font-family: Lato, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  @media (max-width: 1023px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  @media (max-width: 767px) {
+    width: 204px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.services-layout-item-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-layout-item-text {
+  width: 271px;
+  margin: 0 0 30px;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43px;
+  color: #000000;
+  @media (max-width: 1023px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.services-layout-item-button {
+  width: 290px;
+  height: 72px;
+  font-size: 36px;
+  line-height: 43px;
+  @media (max-width: 1023px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @media (max-width: 767px) {
+    width: 220px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

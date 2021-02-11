@@ -1,0 +1,75 @@
+.section-contacts {
+  .section-title:after {
+    content: 'КОНТАКТЫ';
+    position: absolute;
+    z-index: -1;
+    left: -524px;
+    top: -114px;
+    font-family: 'Lato', sans-serif;
+    font-size: 288px;
+    font-weight: 400;
+    line-height: 346px;
+    color: $title-shadow;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.contacts-layout {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 46px;
+  width: 100%;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 25px;
+  }
+}
+
+.contacts-layout-item {
+  @include flex-center-y;
+  @media (max-width: 767px) {
+    margin: 0 0 25px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.contacts-layout-item-icon {
+  @include flex-center-xy;
+  width: 54px;
+  height: 54px;
+  margin: 0 30px 0 0;
+  @media (max-width: 1023px) {
+    margin: 0 24px 0 0;
+  }
+  @media (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.contacts-layout-item-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #000000;
+  transition: 200ms;
+  @media (max-width: 1023px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &:hover {
+    color: $font-highlight;
+  }
+}

@@ -1,0 +1,128 @@
+footer {
+  @include flex-center-y;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $footer-ground;
+}
+
+.footer-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 0 0;
+  margin: 52px 0 46px;
+  width: 100%;
+  box-sizing: border-box;
+  @media (max-width: 767px) {
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 43px 0 50px;
+  }
+  @media (max-width: 479px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.footer-layout-item {
+  @media (max-width: 767px) {
+    @include flex-center-y;
+    flex-direction: column;
+    text-align: center;
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    @include flex-center-x;
+    flex-direction: column;
+
+    @media (max-width: 479px) {
+      margin: 0 0 60px;
+    }
+  }
+}
+
+.footer-layout-item-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #000000;
+  margin: 0 0 20px;
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 23px;
+  }
+}
+
+.footer-layout-item-list {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #000000;
+  @media (max-width: 1023px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  a {
+    transition: 200ms;
+
+    &:hover {
+      color: $font-highlight;
+    }
+  }
+}
+
+.footer-layout-item-list-item {
+  margin: 0 0 6px;
+  @media (max-width: 767px) {
+    margin: 0 0 10px;
+  }
+}
+
+.footer-layout-item-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0 0 18px;
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.footer-layout-item-button {
+  width: 210px;
+  height: 52px;
+  font-size: 24px;
+  line-height: 28px;
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @media (max-width: 767px) {
+    width: 220px;
+    height: 55px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.footer-rights {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  margin: 0 0 20px;
+  @media (max-width: 767px) {
+    margin: 0 0 15px;
+  }
+}

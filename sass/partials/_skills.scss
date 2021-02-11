@@ -1,0 +1,96 @@
+.section-skills {
+  .section-title:after {
+    content: 'НАВЫКИ';
+    position: absolute;
+    z-index: -1;
+    left: -576px;
+    top: -118px;
+    font-family: Lato, sans-serif;
+    font-size: 288px;
+    font-weight: 400;
+    line-height: 346px;
+    color: $title-shadow;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.skills-layout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.skills-layout-item {
+  @include flex-center-y;
+  flex-direction: column;
+  width: 344px;
+  @media (max-width: 767px) {
+    width: 225px;
+    margin: 0 0 40px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.skills-layout-item-image {
+  @include flex-center-xy;
+  width: 198px;
+  height: 198px;
+  background-color: $blue;
+  border-radius: 50%;
+  margin: 0 0 36px;
+  @media (max-width: 767px) {
+    width: 148px;
+    height: 148px;
+    margin: 0 0 10px;
+  }
+
+  img {
+    width: 190px;
+    height: 190px;
+    @media (max-width: 767px) {
+      width: 144px;
+      height: 144px;
+    }
+  }
+}
+
+.skill-layout-item-title {
+  margin: 0 0 14px;
+  font-family: Lato, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #000000;
+  @media (max-width: 767px) {
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.skills-layout-item-desc {
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $skills-font;
+  @media (max-width: 1023px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @media (max-width: 767px) {
+    width: 220px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
